@@ -1,3 +1,5 @@
+import 'package:ecommerce/pages/bottom_nav.dart';
+import 'package:ecommerce/pages/home.dart';
 import 'package:ecommerce/pages/onboarding.dart';
 import 'package:flutter/material.dart';
 
@@ -12,8 +14,10 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        body: Onboarding(),
+      home: SafeArea(
+        child: Scaffold(
+          body: BottomNav(),
+        ),
       ),
     );
   }
